@@ -34,21 +34,10 @@ public class TC2_Evelin {
         searchButton.click();
 
      WebElement checkMsg = driver.findElement(By.xpath("//*[@class='wt-pb-xs-2 has-inline-links']"));
-        System.out.println("checkMsg.getText() = " + checkMsg.getText());
         String checkMSg = checkMsg.getText();
         String expectedResult= "¿Querías decir dadaatolye?";
-         System.out.println("expectedResult = " + expectedResult);
 
-         if(checkMSg.equals(expectedResult)){
-             System.out.println("TRUE");
-         }else{
-             System.out.println("FAIL");
-         }
+     Assert.assertEquals(checkMsg.getText(),expectedResult, "verify Check message");
 
-     Assert.assertEquals(checkMsg,expectedResult, "verify Check message");
-
-
- }
-
-
+    }
 }
