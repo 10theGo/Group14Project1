@@ -1,5 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -19,6 +21,7 @@ public class TC1 {
 
     @AfterMethod
     public void tearDown(){
+
         driver.quit();
     }
 
@@ -30,6 +33,12 @@ public class TC1 {
         String actualResult = driver.getTitle();
 
         Assert.assertEquals(expectedResult,actualResult,"verify page title");
+
+        WebElement mainLogo = driver.findElement(By.xpath("//span[@id='logo']"));
+        mainLogo.click();
+
+        Assert.assertEquals(expectedResult,actualResult,"verify page title");
+
     }
 
 
