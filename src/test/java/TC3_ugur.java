@@ -25,5 +25,6 @@ public class TC3_ugur {
     public void Test1() {
         driver.get("https://www.etsy.com");
         driver.findElement(By.linkText("Jewelry & Accessories")).click();
+
     }
 }
