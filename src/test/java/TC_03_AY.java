@@ -24,6 +24,14 @@ public class TC_03_AY {
 
         WebElement jewelryModule = driver.findElement(By.xpath("//li[@data-name='Jewelry & Accessories']"));
 
+        WebElement results = driver.findElement(By.xpath("//span[contains(text(),'results,')]"));
+
+        String text = results.getText();
+
+        System.out.println("Total results = " + text);
+
+
+
 
 
 
