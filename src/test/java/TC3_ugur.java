@@ -18,13 +18,21 @@ public class TC3_ugur {
 
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
     public void Test1() {
-        driver.get("https://www.etsy.com");
+        driver.get("https://www.etsy.com/");
         driver.findElement(By.linkText("Jewelry & Accessories")).click();
+        String result1 = driver.findElement(By.xpath("//span[contains(text(),' results,')]")).getText();
+        System.out.println(result1);
+
+        driver.navigate().back();
+
+
+
+
 
     }
 }
