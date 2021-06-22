@@ -24,9 +24,10 @@ TC1: etsy.com Verification – Section 1
 TC2: etsy.com Verification – Section 2
 1. Open Chrome browser
 2. Go to https://www.etsy.com/
-3. Print "dada atolye" in the search box.
+3. Print "bohemian sandals" in the search box.
 4. Hit enter.
-5. Verify  "Did you mean the shop dadaatolye?" printed in the page.
+5. Check if there is a button "under 200$"
+6. Click it and return the total results of the bohemian sandals.
 
 TC3: etsy.com Verification – Section 3
 1. Open Chrome browser
@@ -65,8 +66,8 @@ TC6: etsy.com Verification – Section 6
 TC7: etsy.com Verification – Section 7
 1. Open Chrome browser
 2. Go to https://www.etsy.com/
-3. Print "dadaatolye" in the search box.
-4. Click 'find shop names containing "dadaatolye"' in the dropdown menu
-5. Check if there is only 1 result.
-6. Click result with photograph.
-7. Print the city of the shop owner and return true if it is Izmir.
+3. Print "bohem" in the search box.
+4. Click "bohemian sandals"' in the dropdown menu
+5. Click "All Filters" and select FREE shipping.
+6. Click Apply.
+7. Check the total result is 8.
