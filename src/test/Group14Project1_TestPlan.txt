@@ -59,7 +59,7 @@ TC6: etsy.com Verification – Section 6
 2. Go to https://www.etsy.com/
 3. Click Jewelry & Accessories module
 4. Print total result.
-5. Go back.
+5. Go back by clicking "All categories".
 6. Print total result in all categories. ( All categories (65,443,161 results, with Ads Learn more))
 7. Verify that all categories result is bigger than Jewelry & Accesories page.
 
