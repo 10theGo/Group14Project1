@@ -47,5 +47,4 @@ public class TC2_Updated {
        Thread.sleep(3000);
        //Assert.assertTrue(relevantItem.isSelected(), "verify is selected");
     }
-
 }
