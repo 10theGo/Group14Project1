@@ -1,4 +1,10 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import utilities.WebDriverFactory;
 
 public class TC7 {
 
@@ -12,4 +18,25 @@ public class TC7 {
 //            7. Check the total result is 8.
     WebDriver driver;
 
+    @BeforeMethod
+    public void methodStart(){
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
+    }
+
+    @AfterMethod
+    public void afterMethod() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.quit();
+    }
+
+    @Test
+    public void filterTest() throws InterruptedException {
+
+        driver.get("https://www.etsy.com/");
+        WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
+        searchBox.sendKeys("bohem");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//strong[.='bohemian sandals']")).click();
+    }
 }
