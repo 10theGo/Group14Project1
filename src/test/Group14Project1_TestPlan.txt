@@ -61,7 +61,7 @@ TC6: etsy.com Verification – Section 6
 4. Print total result.
 5. Go back by clicking "All categories".
 6. Print total result in all categories. ( All categories (65,443,161 results, with Ads Learn more))
-7. Verify that all categories result is bigger than Jewelry & Accesories page.
+7. Verify that all categories result is bigger than Jewelry & Accessories page.
 
 TC7: etsy.com Verification – Section 7
 1. Open Chrome browser
@@ -70,4 +70,4 @@ TC7: etsy.com Verification – Section 7
 4. Click "bohemian sandals"' in the dropdown menu
 5. Click "All Filters" and select FREE shipping.
 6. Click Apply.
-7. Check the total result is 8.
+7. Check the total result is bigger than 3000.
