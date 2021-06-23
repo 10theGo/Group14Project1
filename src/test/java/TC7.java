@@ -38,5 +38,9 @@ public class TC7 {
         searchBox.sendKeys("bohem");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//strong[.='bohemian sandals']")).click();
+        driver.findElement(By.id("search-filter-button")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//label[contains(text(),'FREE shipping')]")).click();
+        driver.findElement(By.xpath("//button[contains(text(),'Apply')]")).click();
     }
 }
