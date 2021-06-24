@@ -1,21 +1,13 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utilities.WebDriverFactory;
 
 public class TC7 {
-
-//    TC7: etsy.com Verification – Section 7
-//            1. Open Chrome browser
-//            2. Go to https://www.etsy.com/
-//            3. Print "bohem" in the search box.
-//            4. Click "bohemian sandals"' in the dropdown menu
-//            5. Click "All Filters" and select FREE shipping.
-//            6. Click Apply.
-//            7. Check the total result is 8.
     WebDriver driver;
 
     @BeforeMethod
@@ -25,8 +17,7 @@ public class TC7 {
     }
 
     @AfterMethod
-    public void afterMethod() throws InterruptedException {
-        Thread.sleep(1000);
+    public void afterMethod() {
         driver.quit();
     }
 
@@ -42,5 +33,12 @@ public class TC7 {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//label[contains(text(),'FREE shipping')]")).click();
         driver.findElement(By.xpath("//button[contains(text(),'Apply')]")).click();
+        Thread.sleep(2000);
+        WebElement searchResultElement = driver.findElement(By.cssSelector(".wt-display-inline-flex-sm>span:nth-of-type(1)"));
+        String searchResult = searchResultElement.getText().split(" ")[0].replace(",","");
+        System.out.println("search result = " + searchResult);
+        int searchResultInt = Integer.parseInt(searchResult);
+        boolean isSearchResMoreThan1000 = searchResultInt>1000;
+        Assert.assertTrue(isSearchResMoreThan1000);
     }
 }
