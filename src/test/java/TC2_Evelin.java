@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class TC2_Evelin {
@@ -12,7 +11,7 @@ public class TC2_Evelin {
  WebDriver driver;
 
  @Test
-    public void getDriver() throws InterruptedException {
+    public void getDriver() {
 
      WebDriverManager.chromedriver().setup();
 
